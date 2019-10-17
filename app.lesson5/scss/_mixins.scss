@@ -1,0 +1,490 @@
+//@import 'bourbon/bourbon';
+@mixin border-radius($radius) {
+  -webkit-border-radius: $radius;
+  -moz-border-radius: $radius;
+  -ms-border-radius: $radius;
+  border-radius: $radius;
+}
+
+@mixin transform($property) {
+  transform: $property;
+  -webkit-transform: $property;
+  -moz-transform: $property;
+  -o-transform: $property;
+}
+
+@mixin transition($property...) {
+  transition: $property;
+  -webkit-transition: $property;
+  -moz-transition: $property;
+  -o-transition: $property;
+}
+
+@mixin animation($property) {
+  -webkit-animation: $property;
+  -moz-animation: $property;
+  -o-animation: $property;
+  -ms-animation: $property;
+  animation: $property;
+}
+
+@mixin opacity($opacity) {
+  opacity: $opacity;
+  $opacity-ie: $opacity * 100;
+  filter: alpha(opacity=$opacity-ie);
+}
+
+@mixin transition-delay($delay...) {
+  -moz-transition-delay: $delay;
+  -o-transition-delay: $delay;
+  -webkit-transition-delay: $delay;
+  transition-delay: $delay;
+}
+
+//use http://www.font2web.com to generate all font formats
+@mixin add-font($font-url, $font-name, $font-weight: normal, $font-style: normal) {
+  font-family: $font-name;
+  src: url('#{$font-folder}#{$font-url}.eot'), // IE9 Compat Modes
+  url('#{$font-folder}#{$font-url}.eot?@iefix') format('embedded-opentype'), // IE6-IE8
+  url('#{$font-folder}#{$font-url}.woff') format('woff'), // Pretty Modern Browsers
+  url('#{$font-folder}#{$font-url}.ttf') format('truetype'), // Safari, Android, iOS
+  url('#{$font-folder}#{$font-url}.svg#$font-name') format('svg'); // Legacy iOS
+  font-weight: $font-weight;
+  font-style: $font-style;
+}
+
+@mixin transition($prop: all, $time: 0.3s, $ease: ease-in-out) {
+  transition: $prop $time $ease;
+}
+
+@mixin bg-img($img, $pos:center center, $att:scroll) {
+  background-image: url('#{$img-folder}#{$img}');
+  background-position: $pos;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: $att;
+}
+
+@mixin clearfix() {
+  &:before {
+    content: '';
+    display: block;
+  }
+  &:after {
+    clear: both;
+  }
+}
+
+@mixin before_plus($color) {
+  &:before {
+    content: '+';
+    display: inline-block;
+    color: $color;
+    width: em(21);
+    height: em(21);
+    border-radius: 50%;
+    border-color: $color;
+    border-style: solid;
+    border-width: 1px;
+    text-align: center;
+  }
+}
+
+/* AKcia */
+@mixin timer($subsct, $color, $color_title,$position) {
+  .#{$subsct}-action-time {
+    display: block;
+    text-align: #{$position};
+    * {
+      color: $color;
+    }
+    .#{$subsct}-action-title {
+      display: inline-block;
+      font-size: 13px;
+      font-weight: bold;
+      letter-spacing: -1px;
+      margin: 0 auto 9px;
+      color: $color_title;
+    }
+    .#{$subsct}-timer {
+      //text-align: center;
+      line-height: .8 ;
+      .#{$subsct}-digital {
+        //display: inline-block;
+        font-size: 18px;
+        line-height: 1;
+        letter-spacing: 1.5px;
+
+        span {
+          padding-right: 34px;
+          &:last-child {
+            padding-right: 0;
+          }
+        }
+      }
+        .#{$subsct}-text {
+          display: inline-block;
+          line-height: 1;
+          span {
+            font-size: 8px;
+            text-transform: lowercase;
+            padding-right: 33px;
+            &:last-child {
+              padding-right: 0;
+            }
+          }
+        }
+
+    }
+  }
+}
+  /* otizive */
+
+  @mixin otzive($subsct) {
+    .#{$subsct}-otzive {
+      margin-bottom: 32px;
+      img {
+        display: block;
+        float: left;
+        width: 33%;
+        margin-right: 2px;
+      }
+      .#{$subsct}-itzive-total {
+        width: 66%;
+        display: inline-block;
+        padding: 6px 0 6px 9px;
+        .sct-6-excerpt {
+          display: inline-block;
+          float: left;
+          padding: 6px 0 6px 9px;
+          font-size: 9px;
+        }
+        .#{$subsct}-description {
+          display: inline-block;
+          font-size: 9px;
+          background: $accent;
+          padding: 7px 8px 7px 8px;
+        }
+      }
+    }
+  }
+
+  @mixin ListStyle($colorBg) {
+    &:before {
+      content: '';
+      display: inline-block;
+      line-height: 10;
+      margin-right: 4px;
+      width: 4px;
+      height: 4px;
+
+      border-radius: 50%;
+      background: $colorBg;
+    }
+  }
+
+  @mixin Button($colorBg,$colorF,$pad) {
+    input {
+      display: inline-block;
+      margin: 0 auto;
+      &[type='submit'] {
+        background: $colorBg;
+        color: $colorF;
+        font-size: 9px;
+        padding: #{$pad};
+      }
+      @include clearfix;
+    }
+
+  }
+
+  @mixin insertNumber($num, $left, $fz, $color) {
+    &:before {
+      content: '#{$num}';
+      position: absolute;
+      left: $left;
+      font-size: $fz;
+      color: $color;
+
+    }
+  }
+
+  @mixin form($colorBg,$colorF,$pad,$top,$right) {
+    .form {
+      position: absolute;
+      display: inline-block;
+      text-align: center;
+      top: $top;
+      right: $right;
+      padding: 13px 22px 18px;
+
+      background: $colorBg;
+      border-radius: 3px;
+      z-index: 100;
+      .form-title {
+        position: relative;
+        display: inline-block;
+        margin-bottom: 13px;
+        padding-bottom: 8px;
+        font-size: 10px;
+        line-height: .8 ;
+        &:before {
+          content: '';
+          position: absolute;
+          display: inline-block;
+          width: 100px;
+          margin: 0 auto;
+          height: 2px;
+          top: 100%;
+          left: 0;
+          right: 0;
+          background: #8b9ea1;
+        }
+        span {
+          text-decoration: line-through;
+          &:last-child {
+            color: #7eb8b4;
+            text-decoration: none;
+          }
+        }
+      }
+      .input-wrap {
+        display: block;
+        width: 100px;
+        margin: 0 auto;
+        input {
+          margin: 0 auto 7px;
+          &[type='text'] {
+            width: 100px;
+            padding: 7px 0 8px 7px;
+            background: $input_bg;
+            margin-bottom: 7px;
+            font-size: 7px;
+            border: transparent;
+            &:nth-of-type(3){
+              margin-bottom: 15px;
+            }
+          }
+        }
+      }
+
+      @include Button($accent, $whiteGrey, $pad);
+
+    }
+
+  }
+/* наклонные строны блока */
+@mixin trapecia($color,$iconWidth ,$iconHeight,$z-index) {
+  &:after {
+    content: '';
+    position: absolute;
+    display: block;
+    /* //old version fro skew========= */
+    //width: $iconWidthA;
+    //height: 100%;
+    top: 0;
+    //right: -$iconWidthA/2;
+    //background: $color;
+    //transform: skew(-$skew);
+    /* //old version for skew====== */
+    //left: 100%;
+
+    right: -$iconWidth+2px ;
+    z-index: $z-index;
+
+    //width: 0;
+    //height: 0;
+    border-top: $iconHeight solid $color;
+    border-right: $iconWidth solid transparent;
+  }
+  &:before {
+    content: '';
+    position: absolute;
+    display: block;
+    /* old version for skew====== */
+    //width: $iconWidthB;
+    //height: 100%;
+    top: 0;
+    //left: -$iconWidthB/2;
+    //background: $color;
+    //transform: skew(-$skew);
+    /* //old version for skew====== */
+    z-index: $z-index;
+    //right: 100%;
+    left: -$iconWidth +2px ;
+
+    //width: 0;
+    //height: 0;
+    border-bottom: $iconHeight solid $color;
+    border-left: $iconWidth solid transparent;
+  }
+
+}
+/* --------------------------------------------- */
+@mixin form-order($bgcolor,$iconWidth ,$iconHeight,$z-index ){
+  .form-order {
+    padding: 38px 35px 38px 25px;
+    float: right;
+    width: 28%;
+    background: $bgcolor;
+    opacity: .8;
+    position: relative;
+    //line-height: 1;
+    height:$iconHeight;
+    h2 {
+      //margin: 0;
+      //padding: 0;
+      display: inline-block;
+      text-align: center;
+      font-weight: bold;
+      color: #fff;
+      font-size: 22px;
+      text-transform: uppercase;
+
+      span {
+        display: block;
+        width: 100%;
+        font-weight: bold;
+        color: #fff;
+        font-size: 12px;
+        margin-top: 12px;
+        margin-bottom: 24px ;
+      }
+    }
+    /* //h2 */
+    input {
+      display: block;
+      width: 100%;
+      //$input_mb:15px;
+      margin-bottom: 16px;
+      background: none;
+      padding: 18px 0 20px 14px;
+      margin-right: 0;
+      font-size: 14px;
+      &:last-of-type {
+        margin-bottom: 0;
+      }
+      &[type='submit'] {
+        border: 2px solid #c50619;
+        font-size: 14px;
+        text-transform: uppercase;
+        color: #c50619;
+        margin-bottom: 0;
+      }
+    }
+    //border-bottom: 4px solid #000;
+    @include trapecia($bgcolor, $iconWidth , $iconHeight, $z-index);
+    //
+    /* //input */
+  }
+}/* //form-order */
+
+/* =============slidet two  polzunok */
+@mixin range-slider($width, $height, $input-top, $input-bg-color, $input-thumb-color, $float:none, $input-height:20px ) {
+  position: relative;
+  display: block;
+  min-height: 1px;
+  width: $width;
+  height: $height;
+  //float: $float;
+  text-align: center;
+
+  input[type='range'] {
+    pointer-events: none;
+    position: absolute;
+    -webkit-appearance: none;
+    border: none;
+    //background: $input-bg-color;
+    background: none;
+
+    //box-shadow: inset 0 1px 0 0 darken($input-bg-color,15%), inset 0 -1px 0 0 darken($input-bg-color,10%);
+    //-webkit-box-shadow: inset 0 1px 0 0 darken($input-bg-color,15%), inset 0 -1px 0 0 darken($input-bg-color,10%);
+    overflow: hidden;
+    left: 0;
+    top: 0;
+    //top: $input-top;
+    width: $width;
+    outline: none;
+    height: 16px;
+    //height: $input-height;
+    //margin: 0;
+    //padding: 0;
+
+  }
+  input[type='range']::-webkit-slider-runnable-track {
+    height: 6px;
+    background: #cdcdcd;
+  }
+  input[type='range'] {
+    &:nth-of-type(1) {
+      &::-webkit-slider-thumb {
+        pointer-events: all;
+        position: relative;
+        z-index: 2;
+        outline: 0;
+        -webkit-appearance: none;
+        width: 25px;
+        height: 16px;
+        border: none;
+        margin-top: -6px;
+        box-shadow: -13px 0 #cdcdcd, -26px 0 #cdcdcd, -39px 0 #cdcdcd,
+        -52px 0 #cdcdcd, -65px 0 #cdcdcd, -78px 0 #cdcdcd,
+        -91px 0 #cdcdcd, -104px 0 #cdcdcd, -117px 0 #cdcdcd,
+        -130px 0 #cdcdcd, -143px 0 #cdcdcd, -156px 0 #cdcdcd,
+        -169px 0 #cdcdcd, -182px 0 #cdcdcd, -195px 0 #cdcdcd,
+        -208px 0 #cdcdcd, -221px 0 #cdcdcd, -234px 0 #cdcdcd,
+        -247px 0 #cdcdcd, -260px 0 #cdcdcd;
+        //border-radius: $input-border-radius;
+        //background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, lighten($input-thumb-color,60%)), color-stop(100%, $input-thumb-color)); /* android <= 2.2 */
+        //background-image: -webkit-linear-gradient(top , lighten($input-thumb-color,60%) 0, $input-thumb-color 100%); /* older mobile safari and android > 2.2 */;
+        //background-image: linear-gradient(to bottom, lighten($input-thumb-color,60%) 0, $input-thumb-color 100%); /* W3C */
+        background: #cdcdcd url('../img/polsunok-left.png');
+      }
+    }
+    &:nth-of-type(2) {
+      &::-webkit-slider-thumb {
+        pointer-events: all;
+        position: relative;
+        z-index: 1;
+        outline: 0;
+        -webkit-appearance: none;
+        width: 25px;
+        height: 16px;
+        border: none;
+        margin-top: -6px;
+        box-shadow: -13px 0 15px 0 #ff0200, -26px 0 #ff0200, -39px 0 #ff0200,
+        -52px 0 #ff0200, -65px 0 #ff0200, -78px 0 #ff0200,
+        -91px 0 #ff0200, -104px 0 #ff0200, -117px 0 #ff0200,
+        -130px 0 #ff0200, -143px 0 #ff0200, -156px 0 #ff0200,
+        -169px 0 #ff0200, -182px 0 #ff0200, -195px 0 #ff0200,
+        -208px 0 #ff0200, -221px 0 #ff0200, -234px 0 #ff0200,
+        -247px 0 #ff0200, -260px 0 #ff0200;
+        //border-radius: $input-border-radius;
+        //background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, lighten($input-thumb-color,60%)), color-stop(100%, $input-thumb-color)); /* android <= 2.2 */
+        //background-image: -webkit-linear-gradient(top , lighten($input-thumb-color,60%) 0, $input-thumb-color 100%); /* older mobile safari and android > 2.2 */;
+        //background-image: linear-gradient(to bottom, lighten($input-thumb-color,60%) 0, $input-thumb-color 100%); /* W3C */
+        background: #ff0200 url('../img/polsunok-right.png') 50% 50% / cover;
+
+      }
+    }
+  }
+}
+
+/* vertical align middle */
+@mixin vam($align : middle){
+  height: 100%;
+  &:before{
+    content: '';
+    display: inline-block;
+    height: 100%;
+    vertical-align: $align;
+    float: none;
+
+  }
+}
+
+
+
+
+
+

@@ -1,0 +1,33 @@
+//@import "bourbon";
+//adding fonts
+//
+//@include  font-face('#{$font-folder}Segoeu','segoeuibold/segoeuibold','600')
+//
+//@include  font-face('#{$font-folder}Segoeu','SegoeUILight/ofont.ru_Segoe UI Light','300')
+//
+//@include font-face('#{$font-folder}Segoeu','SegoeUIregular/Segoe UIregular','400')
+//
+//@include font-face('#{$font-folder}Segoeu','SegoeUISemibold/ofont.ru_Segoe UI Semibold','500')
+//
+//@include font-face('icomoon','#{$font-folder}icomoon/icomoon')
+
+//
+//@font-face {
+//  font-family: 'icomoon';
+//  src:  url('../fonts/icons/icomoon.eot');
+//  src:  url('../fonts/icons/icomoon.eot') format('embedded-opentype'),
+//  url('../fonts/icons/icomoon.ttf') format('truetype'),
+//  url('../fonts/icons/icomoon.woff') format('woff'),
+//   url('../fonts/icons/icomoon.svg?#icomoon') format('svg');
+//  font-weight: normal;
+//  font-style: normal;
+//}
+//@include add-font("../fonts/icons/iconmoon","icons");
+
+//@include font-face("icons", "../fonts/icons/icons",null,null,$file-formats: eot ttf woff);
+//@include font-face("Roboto bold", "../fonts/roboto-bold/roboto-bold_[allfont.ru]",null,null,$file-formats: eot ttf woff);
+//@include font-face("Roboto light", "../fonts/roboto-light/roboto-light_[allfont.ru]",null,null,$file-formats: eot ttf woff);
+//@include font-face("Roboto medium", "../fonts/roboto-medium/roboto-medium_[allfont.ru]",null,null,$file-formats: eot ttf woff);
+//@include font-face("icomoon", "../fonts/icons/icomoon",null,null,$file-formats: eot ttf woff woff2);
+
+

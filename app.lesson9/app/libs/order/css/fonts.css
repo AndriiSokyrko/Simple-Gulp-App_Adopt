@@ -1,0 +1,40 @@
+@font-face {
+	font-family: 'bold';
+	src: url('http://hp-discount.ru/fonts/gothaprobol-webfont.eot');
+	src: url('http://hp-discount.ru/fonts/gothaprobol-webfont.eot?') format('embedded-opentype'),
+		 url('../fonts/gothaprobol-webfont.woff') format('woff'),
+		 url('http://hp-discount.ru/fonts/gothaprobol-webfont.ttf') format('truetype'),
+		 url('http://hp-discount.ru/fonts/gothaprobol-webfont.svg') format('svg');
+}
+@font-face {
+	font-family: 'light';
+	src: url('http://hp-discount.ru/fonts/gothaprolig-webfont.eot');
+	src: url('http://hp-discount.ru/fonts/gothaprolig-webfont.eot?') format('embedded-opentype'),
+		 url('../fonts/gothaprolig-webfont.woff') format('woff'),
+		 url('http://hp-discount.ru/fonts/gothaprolig-webfont.ttf') format('truetype'),
+		 url('http://hp-discount.ru/fonts/gothaprolig-webfont.svg') format('svg');
+}
+@font-face {
+	font-family: 'medium';
+	src: url('http://hp-discount.ru/fonts/gothapromed-webfont.eot');
+	src: url('http://hp-discount.ru/fonts/gothapromed-webfont.eot?') format('embedded-opentype'),
+		 url('../fonts/gothapromed-webfont.woff') format('woff'),
+		 url('http://hp-discount.ru/fonts/gothapromed-webfont.ttf') format('truetype'),
+		 url('http://hp-discount.ru/fonts/gothapromed-webfont.svg') format('svg');
+}
+@font-face {
+	font-family: 'regular';
+	src: url('http://hp-discount.ru/fonts/gothaproreg-webfont.eot');
+	src: url('http://hp-discount.ru/fonts/gothaproreg-webfont.eot?') format('embedded-opentype'),
+		 url('../fonts/gothaproreg-webfont.woff') format('woff'),
+		 url('http://hp-discount.ru/fonts/gothaproreg-webfont.ttf') format('truetype'),
+		 url('http://hp-discount.ru/fonts/gothaproreg-webfont.svg') format('svg');
+}
+@font-face {
+	font-family: 'black';
+	src: url('http://hp-discount.ru/fonts/gothaprobla-webfont.eot');
+	src: url('http://hp-discount.ru/fonts/gothaprobla-webfont.eot?') format('embedded-opentype'),
+		 url('../fonts/gothaprobla-webfont.woff') format('woff'),
+		 url('http://hp-discount.ru/fonts/gothaprobla-webfont.ttf') format('truetype'),
+		 url('http://hp-discount.ru/fonts/gothaprobla-webfont.svg') format('svg');
+}

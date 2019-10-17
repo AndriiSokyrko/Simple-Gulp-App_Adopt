@@ -1,0 +1,82 @@
+@mixin border-radius($radius)
+	-webkit-border-radius: $radius
+	-moz-border-radius: $radius
+	-ms-border-radius: $radius
+	border-radius: $radius
+
+@mixin transform($property)
+	transform: $property
+	-webkit-transform: $property
+	-moz-transform: $property
+	-o-transform: $property
+
+@mixin transition($property...)
+	transition: $property
+	-webkit-transition: $property
+	-moz-transition: $property
+	-o-transition: $property
+
+@mixin animation($property)
+	-webkit-animation: $property
+	-moz-animation: $property
+	-o-animation: $property
+	-ms-animation: $property
+	animation: $property
+
+@mixin opacity($opacity)
+	opacity: $opacity
+	$opacity-ie: $opacity * 100
+	filter: alpha(opacity=$opacity-ie)
+
+@mixin transition-delay($delay...)
+	-moz-transition-delay:    $delay
+	-o-transition-delay:      $delay
+	-webkit-transition-delay: $delay
+	transition-delay:         $delay
+
+//use http://www.font2web.com to generate all font formats
+@mixin add-font($font-url, $font-name, $font-weight: normal, $font-style: normal)
+  font-family: $font-name,
+    src: url('#{$font-folder}#{$font-url}.eot') , // IE9 Compat Modes
+         url('#{$font-folder}#{$font-url}.eot?@iefix') format('embedded-opentype') , // IE6-IE8
+         url('#{$font-folder}#{$font-url}.woff') format('woff') , // Pretty Modern Browsers
+         url('#{$font-folder}#{$font-url}.ttf"') format('truetype') , // Safari, Android, iOS
+         url('#{$font-folder}#{$font-url}.svg#$font-name') format('svg') // Legacy iOS
+  font-weight: $font-weight
+  font-style: $font-style
+
+@mixin transition($prop: all, $time: 0.3s, $ease: ease-in-out)
+  transition: $prop $time $ease
+
+
+@mixin bg-img($img, $pos:center center, $att:scroll)
+  background-image: url('#{$img-folder}#{$img}')
+  background-position: $pos
+  background-repeat: no-repeat
+  background-size: cover
+  background-attachment: $att
+
+
+@mixin clearfix()
+  &:before, &:after
+    content: ""
+    display: table
+  &:after
+    clear: both
+
+@mixin before_plus($color)
+    &:before
+      content: "+"
+      display: inline-block
+      color: $color
+      width: em(21)
+      height: em(21)
+      border-radius: 50%
+      border-color: $color
+      border-style: solid
+      border-width: 1px
+      text-align: center
+
+
+
+

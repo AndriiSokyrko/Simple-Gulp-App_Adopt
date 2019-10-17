@@ -1,0 +1,295 @@
+/*==========  Desktop First Method  ==========*/
+/* Large Devices, Wide Screens */
+@media only screen and (max-width: 1200px) {
+  /*input kode here*/
+}
+/* Medium Devices, Desktops */
+@media only screen and (max-width: 992px) {
+  /*input kode here*/
+  .header {
+    .header-top-bg {
+      .header-top-container {
+        .header-top-row {
+          .header-top-col-left {
+          }
+          //header-col-left
+
+          .header-top-col {
+            .header-top-col-right {
+              div.header-top-col-right__phone_wrapper {
+                vertical-align: middle;
+                [class *="header-top-col-right__phone"] {
+                  display: block;
+                }
+              }
+              /**wrapper*/
+              .header-top-col-right__btn {
+                button.btn {
+                  span.lg-screen {
+                  }
+                }
+              }
+              /*right btn*/
+
+            }
+            //col-right
+          }
+          //col
+        }
+        /* //header-row */
+      }
+      /* //header-container */
+    }
+    /* //header-bg */
+  }
+}
+/* Small Devices, Tablets */
+@media only screen and (max-width: 768px) {
+  /*input kode here*/
+  .header {
+    .header-top-bg {
+      .header-top-container {
+        .header-top-row {
+           .header-top-col-left {
+            .logo-lg {
+              display: none;
+            }
+
+            img.top-menu-mobile, img.logo-mb {
+              display: inline-block;
+              vertical-align: middle;
+              margin-left: 15px;
+
+            }
+          }
+          //header-col-left
+
+          .header-top-col {
+            .header-top-col-right {
+              display: inline-block;
+              text-align: center;
+
+              div.header-top-col-right__phone_wrapper {
+                [class *="header-top-col-right__phone"] {
+                  font-size: 14px ;
+                }
+              }
+              /**wrapper*/
+              .header-top-col-right__btn {
+                display: inline-block;
+                text-align: left;
+                button.btn {
+                  span.lg-screen {
+                    display: none;
+                  }
+                }
+              }
+              /*right btn*/
+
+            }
+            //col-right
+          }
+          //col
+        }
+        /* //header-row */
+      }
+      /* //header-container */
+    }
+    /* //header-bg */
+  }
+  .section1 {
+    .section1-top-bg {
+      .section1-top-container {
+        .section1-top-row {
+          .section1-top-col {
+            .section1-top-col-left {
+              display: none;
+            }
+          }
+          //section-col-left
+
+          .section1-top-col-right {
+            .section1-top-col-right_items{
+              text-align: center;
+              h1 {
+
+                display: inline-block;
+                font-size: 22px;
+                color: #ff9d00;
+              }
+              span {
+                text-align: center;
+
+              }
+              //left_items
+            }
+            //col-right_items
+          }
+          //col-right
+        }
+        /* //section-row */
+      }
+      /* //section-container */
+    }
+    /* //section-bg */
+  }
+}
+/*Disable Animation on Mobile Devices*/
+
+/* Extra Small Devices, Phones */
+@media only screen and (max-width: 560px) {
+   /* //header */
+
+
+}
+@media only screen and (max-width: 480px) {
+  /*input kode here*/
+
+  .header {
+    .header-top-bg {
+      .header-top-container {
+        .header-top-row {
+          .header-top-col-left {
+            .logo-lg {
+              display: none;
+            }
+
+            img.top-menu-mobile, img.logo-mb {
+              display: inline-block;
+              vertical-align: middle;
+              margin-left: 10px !important;
+
+            }
+          }
+          //header-col-left
+
+          .header-top-col {
+            .header-top-col-right {
+              display: inline-block;
+              text-align: center;
+
+              div.header-top-col-right__phone_wrapper {
+                [class *="header-top-col-right__phone"] {
+                  font-size: 10px !important ;
+                }
+              }
+              /**wrapper*/
+              .header-top-col-right__btn {
+                display: inline-block;
+                text-align: left;
+                button.btn {
+                  span.lg-screen {
+                    display: none;
+                  }
+                }
+              }
+              /*right btn*/
+
+            }
+            //col-right
+          }
+          //col
+        }
+        /* //header-row */
+      }
+      /* //header-container */
+    }
+    /* //header-bg */
+  }
+
+}
+
+/* Custom, iPhone Retina */
+@media only screen and (max-width: 360px) {
+  /*input kode here*/
+
+  //end header
+
+  .header {
+    .header-top-bg {
+      .header-top-container {
+        .header-top-row {
+          .header-top-col-left {
+            .logo-lg {
+              display: none;
+            }
+
+            img.top-menu-mobile, img.logo-mb {
+              display: inline-block;
+              vertical-align: middle;
+              margin-left: 10px !important;
+
+            }
+          }
+          //header-col-left
+
+          .header-top-col {
+            .header-top-col-right {
+              display: inline-block;
+              text-align: center;
+
+              div.header-top-col-right__phone_wrapper {
+                [class *="header-top-col-right__phone"] {
+                  font-size: 10px !important;
+                }
+              }
+              /**wrapper*/
+              .header-top-col-right__btn {
+                display: inline-block;
+                text-align: left;
+                button.btn {
+                  span.lg-screen {
+                    display: none;
+                  }
+                }
+              }
+              /*right btn*/
+
+            }
+            //col-right
+          }
+          //col
+        }
+        /* //header-row */
+      }
+      /* //header-container */
+    }
+    /* //header-bg */
+  }
+
+
+}
+/*==========  Mo`ile First Method  ==========*/
+
+/* Custom, iPhone Retina */
+@media only screen and (min-width: 320px) {
+  /*input kode here*/
+
+}
+
+/* Extra Small Devices, Phones */
+@media only screen and (min-width: 480px) {
+  /*input kode here*/
+  .site-nav{
+    display: none;
+  }
+}
+
+/* Small Devices, Tablets */
+@media only screen and (min-width: 768px) {
+  /*input kode here*/
+
+
+}
+
+/* Medium Devices, Desktops */
+@media only screen and (min-width: 992px) {
+  /*input kode here*/
+
+}
+
+/* Large Devices, Wide Screens */
+@media only screen and (min-width: 1200px) {
+  /*input kode here*/
+
+}
