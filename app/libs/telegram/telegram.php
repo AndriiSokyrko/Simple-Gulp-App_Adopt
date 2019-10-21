@@ -5,10 +5,10 @@ if (  !isset($_POST['user_phone']) || empty($_POST['user_phone']) )
     die();
 //    header("location: http://localhost:3000"); ;
 $phone = $_POST['user_phone'];
-$token = "936471140:AAHMVErENuTLETwKLXpBdVqsjkDWg6r67L0";
+$token = "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx";
 //$url_chat = "https://api.telegram.org/bot{token}/getUpdates";
 $url_chat = "https://api.telegram.org/bot".$token;
-$id_chat="484613044";
+$id_chat="xxxxxxxx";
 $data=[
   'phone'=>$phone,
    'token'=>$token
