@@ -1,28 +1,65 @@
-$(window).ready(function () {
-
-});
 $(document).ready(function () {
-    /*waypoint*/
-    $('.basic-waypoint').waypoint({
-        handler: function (dir) {
-            console.log('ID: ' + this.element.id)
-            if (dir === 'down') {
-                $(this.element)
-                    .removeClass('flash')
-                    .addClass('fadeInRight');
-            }
-
-            else {
-                $(this.element)
-                    .removeClass('fadeInRight')
-                    .addClass('flash');
-            };
-
-        },
-
-        offset: '20%'
-
+    /*scrol top*/
+    $(".fa-angle-up").click(function (){
+        $("body,html").animate({
+            scrollTop:0
+        }, 800);
+        return false;
     });
+    /*modal form*/
+   // $('#myModal[type="submit"]').on('click', function () {
+
+   // $('#sendMail').on('submit', function (e) {
+   //     e.preventDefault();
+   //     data=$('#myModal').serialize();
+   //    // console.log(data);
+   //     $.ajax({
+   //         url: "/libs/PHPMailer/PHPmailer/mailer/smart.php", // куда отправляем
+   //         type: "post", // метод передачи
+   //         // dataType: "json", // тип передачи данных
+   //         data: data,
+   //         // после получения ответа сервера
+   //         success: function(data){
+   //             alert('succes');
+   //             $("#myModal").modal('hide');
+   //              $('#messageMail').modal('show') ;
+   //         },
+   //         error: function (data) {
+   //             alert('error');
+   //         }
+   //     });
+   //
+   //
+   // });
+
+   $('#oFormHead').on('click', function () {
+       $('#myModal').css({"top": "25%" } );
+            $('#myModal').addClass('animated flip');
+
+   });
+    /*waypoint*/
+        $('.basic-waypoint').waypoint({
+            handler: function (dir) {
+                console.log('ID: ' + this.element.id)
+                if (dir === 'down') {
+                    $(this.element)
+                        .removeClass('flip')
+                        .addClass('fadeInRight');
+                }
+
+                else {
+                    $(this.element)
+                        .removeClass('fadeInRight')
+                        .addClass('flip');
+                }
+                ;
+
+            },
+            offset: '60%'
+
+        });
+
+
     /*bgscroll paralax*/
     $(window).stellar();
     /*end paralax*/
@@ -173,6 +210,7 @@ $(document).ready(function () {
 
     });
 });
+
 
 
 

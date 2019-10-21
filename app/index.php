@@ -7,27 +7,39 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="description"/>
     <meta name="keywords" content="keywords"/>
+    
 
     <link rel="stylesheet" href="css/reset.css">
     <!--<link rel="stylesheet" typ e="text/css" href="libs/bootstrap-grid/bootstrap-grid-3.3.1.min.css"/>-->
     <link rel="stylesheet" type="text/css" href="libs/bootstrap-grid/bootstrap-grid-4.3.1.min.css"/>
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <!-- Popper JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
+    <!-- forn owesome -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
     <!--    <link rel="stylesheet" href="../libs/font-awesome/css/font-awesome.css">-->
     <link rel="stylesheet" href="css/style.min.css">
     <link rel="stylesheet" href="libs/animate_css/animate.min.css">
     <script src="libs/jquery/jquery-1.9.1.min.js"></script>
 
-  
     <!-- slickslider -->
     <script src="libs/SlickSlider/slick-1.8.1/slick/slick.min.js"></script>
     <link rel="stylesheet" href="libs/SlickSlider/slick-1.8.1/slick/slick.css">
     <link rel="stylesheet" href="libs/SlickSlider/slick-1.8.1/slick/slick-theme.css">
     <!--	<script type="text/javascript" src="libs/wow/wow.min.js"></script>-->
 
+    <!-- OWL Slider -->
     <link rel="stylesheet" href="libs/owl2/assets/owl.theme.default.min.css">
     <link rel="stylesheet" href="libs/owl2/assets/owl.carousel.min.css">
     <script src="libs/owl2/owl.carousel.min.js"></script>
 
+    <!-- Slick Slider -->
     <script src="libs/SlickSlider/slick-1.8.1/slick/slick.min.js"></script>
     <!-- jQuery 1.8 or later, 33 KB -->
     <!--    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>-->
@@ -36,22 +48,21 @@
     <link  href="https://cdnjs.cloudflare.com/ajax/libs/fotorama/4.6.4/fotorama.css" rel="stylesheet">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/fotorama/4.6.4/fotorama.js"></script>
 
+    <!-- Google api -->
     <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&;sensor=false"></script>
-
+    <!-- My compiled JS -->
     <script src="js/scripts.min.js"></script>
-
-<!--    <script src="libs/wow/wow.min.js"></script>-->
+    <!-- WAYPOINTS -->
     <script src="libs/waypoints/jquery.waypoints.js"></script>
+
+    <!-- paralax STELLAR -->
     <script src="libs/stellar.js-master/jquery.stellar.min.js"></script>
 
 
 </head>
-
-
-
 <body>
 
-<header class="header">
+<header  id="header" class="header">
     <div class="header-top-bg">
 
         <div class="container header-top-container">
@@ -73,14 +84,6 @@
                 <div class="col-6 col-sm-6 col-md-4 col-lg-4 col-xl-4 header-top-col-left bg">
                     <img class="logo-lg" src="img/header-logo.png" alt="">
                     <img class="top-menu-mobile trigger-nav" src="img/top-menu.png" alt="to-menu">
-<!--                    <div id="nav-icon1" class="logo-lg trigger-nav">-->
-<!--                        <span></span>-->
-<!--                        <span></span>-->
-<!--                        <span></span>-->
-<!--                    </div>-->
-
-
-
                     <img class="logo-mb" src="img/header-logo-mobile.png" alt="">
                 </div><!-- //header-top-left -->
                 <div class="col-6 col-sm-6 col-md-8 col-lg-8 col-xs-8 header-top-col bg">
@@ -97,7 +100,7 @@
                         </div>
                         <!-- /.header-top-row-left__phone2 -->
                         <div class="header-top-col-right__btn">
-                            <button class="btn">
+                            <button id="oFormHead" class="btn"  data-toggle="modal" data-target="#myModal">
                                 <img src="img/phone-icon.png" alt="Icon phone">
                                 <span class="lg-screen">Заказать звонок</span>
                             </button>
@@ -113,6 +116,11 @@
     </div>    <!-- /.header-top-bg -->
     <!--  пример блока header -->
 </header><!-- //header -->
+<!-- Button to Open the Modal -->
+<!--<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal">-->
+<!--    Open modal-->
+<!--</button>-->
+
 
 <section class="section1">
     <div class="section1-top-bg"  data-stellar-background-ratio="0.5">
@@ -129,18 +137,18 @@
                    <div class="section1-top-col-right_items">
                        <h1>Производство упаковки из гофрокартона</h1>
                     <span class="subtitle">с доставкой по всей России</span>
-                    <form action="">
+                    <form  action="">
                         <p>Получите индивидуальное предложение <br>
                             на производство и поставку гофропродукции <br>
                             <span>Образцы упаковки бесплатно!</span></p>
                         <div class="form-btn">
-                            <input class="form-btn_btn form-btn_btno" type="text" value=""
-                                   placeholder="Введите номер телефона">
-                            <input class="form-btn_btn" type="button" value="Оставить заявку!">
+                            <input id="myInput" class="form-btn_btn form-btn_btno" type="text" value=""
+                                   placeholder="+7 (ХХХ) ХХХ-ХХ-ХХ">
+                            <input  id="send_form" class="form-btn_btn" type="button" value="Оставить заявку!">
                         </div>
                     </form>
                     <span>*Минимальный заказ 500шт</span></div>
-                    
+
                 </div>
                 <!-- /.col-12 col-sm-12 col-md-7 col-lg-7col-xs-7 -->
 
@@ -600,7 +608,7 @@
                             </div>
                         </div><!--  phone-->
 
-                        <input class="btn" type="button" value="Заказать звонок">
+                        <input class="btn" type="button" value="Заказать звонок"  data-toggle="modal" data-target="#myModal">
 
                         <div class="section8-col-left-email">
                             <div class="wrap"><img src="img/bottom-icon3.png" alt=""></div>
@@ -656,8 +664,46 @@
             </div><!-- //header-top-row -->
         </div><!--  //container-->
     </div><!-- /.header-top-bg -->
-
+     <span class="fa fa-angle-up  fa-5x"></span>
 </footer>
+
+<!-- The Modal -->
+<div class="modal" id="myModal">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <form id="sendMail" action="libs/telegram/telegram.php" method="post">
+                <p>Получите индивидуальное предложение <br>
+                    на производство и поставку гофропродукции <br>
+                    <span>Образцы упаковки бесплатно!</span></p>
+                <div class="form-btn">
+                    <input id="user_phone" name="user_phone" class="form-btn_btn form-btn_btno"
+                           type="text" placeholder="+7( XXX ) XXX-XX-XX" >
+                    <input class="form-btn_btn" type="submit"
+                           value="Оставить заявку!">
+
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+<!-- end modal -->
+
+
+<!-- phpmailer message -->
+<div class="modal" id="messageMail">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <span> Сообщение успешно отпрвлено</span>
+        </div>
+    </div>
+</div>
+<!-- //ph[mailer message -->
+
+
+
+
+
+
 
 
 <!--  пример блока-->
@@ -738,7 +784,12 @@
             </div><!--  //row-->
         </div><!--  //container-->
     </div><!--  //footer-top-bg-->
+    <!-- Button Up -->
+
+        <!-- //button UP -->
 </footer>
+
+
 
 
 <!--ьлок акция  timer -->

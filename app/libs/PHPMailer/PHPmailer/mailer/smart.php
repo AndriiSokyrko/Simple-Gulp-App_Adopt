@@ -1,24 +1,26 @@
-<?php 
+<?php
 
-$name = $_POST['user_name'];
+//$name = $_POST['myInput'];
+if (  !isset($_POST['user_phone']) || empty($_POST['user_phone']) )
+   die();
+//    header("location: http://localhost:3000"); ;
 $phone = $_POST['user_phone'];
 
 require_once('phpmailer/PHPMailerAutoload.php');
 $mail = new PHPMailer;
 $mail->CharSet = 'utf-8';
-
 //$mail->SMTPDebug = 3;                               // Enable verbose debug output
 
 $mail->isSMTP();                                      // Set mailer to use SMTP
-$mail->Host = 'smtp.mail.ru';  // Specify main and backup SMTP servers
+$mail->Host = 'smtp.rambler.ru';  // Specify main and backup SMTP servers
 $mail->SMTPAuth = true;                               // Enable SMTP authentication
-$mail->Username = 'mail@mail.ru';                 // Наш логин
-$mail->Password = '032ujfw9';                           // Наш пароль от ящика
+$mail->Username = 'sorey14@rambler.ru';                 // Наш логин
+$mail->Password = 'a14r05s19k69';                           // Наш пароль от ящика
 $mail->SMTPSecure = 'ssl';                            // Enable TLS encryption, `ssl` also accepted
 $mail->Port = 465;                                    // TCP port to connect to
- 
-$mail->setFrom('mail@mail.ru', 'John Doe');   // От кого письмо 
-$mail->addAddress('mail@yandex.ru');     // Add a recipient
+
+$mail->setFrom('sorey14@rambler.ru', 'John Doe');   // От кого письмо
+$mail->addAddress('sorey14@rambler.ru');     // Add a recipient
 //$mail->addAddress('ellen@example.com');               // Name is optional
 //$mail->addReplyTo('info@example.com', 'Information');
 //$mail->addCC('cc@example.com');
@@ -34,10 +36,12 @@ $mail->Body    = '
 	Телефон: ' . $phone . '';
 $mail->AltBody = 'Это альтернативный текст';
 
-if(!$mail->send()) {
-    return false;
-} else {
-    return true;
-}
+if(!$mail->Send()){
+    echo "Ошибка отправки письма: " . $mail->ErrorInfo;
+}else{
 
+    echo "Письмо отправленно!";
+
+//    header("location: http://localhost:3000");
+}
 ?>

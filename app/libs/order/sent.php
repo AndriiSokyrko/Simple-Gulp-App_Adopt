@@ -1,25 +1,4 @@
-<!DOCTYPE html>
-<html lang="ru">
-<head>
-		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-		<meta charset="UTF-8">
-		<meta name="format-detection" content="telephone=no">
-		<meta name="viewport" content="width=960px">
-		<title>Отправлено</title>
-		<link rel="shortcut icon" type="image/x-icon" href="img/favicon.ico">
-		<link rel="stylesheet" href="css/fonts.css">
-		<link rel="stylesheet" href="css/style.css">
-</head>
-<body>
-	<div id="order">
-		<div>
-			<h5>Спасибо, что оформили заказ</h5>
-			<p>Наш менеджер свяжется с вами в течение 1 рабочего часа</p>
-			<a href="../index.php">Вернуться на сайт</a>
-		</div>
-	</div>
-</body>
-</html>
+
 <?php
 	if (isset($_POST["send_dzv"])) {
 		$message = "Перезвоните мне<br />
