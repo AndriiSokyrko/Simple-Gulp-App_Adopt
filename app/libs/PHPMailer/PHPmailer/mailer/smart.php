@@ -14,13 +14,13 @@ $mail->CharSet = 'utf-8';
 $mail->isSMTP();                                      // Set mailer to use SMTP
 $mail->Host = 'smtp.rambler.ru';  // Specify main and backup SMTP servers
 $mail->SMTPAuth = true;                               // Enable SMTP authentication
-$mail->Username = 'sorey14@rambler.ru';                 // Наш логин
-$mail->Password = 'a14r05s19k69';                           // Наш пароль от ящика
+$mail->Username = 'yorname@rambler.ru';                 // Наш логин
+$mail->Password = '11111111111';                           // Наш пароль от ящика
 $mail->SMTPSecure = 'ssl';                            // Enable TLS encryption, `ssl` also accepted
 $mail->Port = 465;                                    // TCP port to connect to
 
-$mail->setFrom('sorey14@rambler.ru', 'John Doe');   // От кого письмо
-$mail->addAddress('sorey14@rambler.ru');     // Add a recipient
+$mail->setFrom('yorname@rambler.ru', 'John Doe');   // От кого письмо
+$mail->addAddress('yorname@rambler.ru');     // Add a recipient
 //$mail->addAddress('ellen@example.com');               // Name is optional
 //$mail->addReplyTo('info@example.com', 'Information');
 //$mail->addCC('cc@example.com');
